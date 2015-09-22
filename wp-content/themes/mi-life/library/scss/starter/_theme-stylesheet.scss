@@ -1,0 +1,93 @@
+/*********************************************************************************
+Stylesheet: Theme Stylesheet - REMOVE THIS FILE BEFORE GOING TO PRODUCTION
+*********************************************************************************/
+
+// header
+.page-header{
+	text-align: center;
+
+	.main-logo{
+		width: 5rem;
+		height: auto;
+		margin-bottom: 1rem;
+		border-bottom: 3px solid darken($red, 20%);
+	}
+}
+
+// menu
+.main-menu{
+	
+	.menu{
+		background: $bgrey;
+		border-bottom: 3px solid darken($bgrey, 10%);
+		margin: 0;
+		padding: 0;
+		
+		li{
+			list-style-type: none;
+			
+			a{
+				display: block;
+				color: $white;
+				text-decoration: none;
+				padding: 0.5rem 1rem;
+				border-bottom: 1px solid darken($bgrey, 5%);
+			}
+			
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+// footer
+.page-footer{
+	border-top: 1px solid darken($lgrey, 10%);
+	padding: 1rem 0;
+	p{
+		margin: 0;
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+
+	.page-header{
+	
+		.main-logo{
+			width: auto;
+		}
+	}
+	
+	.main-menu{
+	
+		.menu{
+			
+			li{
+				display: inline-block;
+				border-bottom: 0;
+				
+				a{
+					padding: 1rem 2rem;
+					border-bottom: none;
+					display: block;
+					border-right: 1px solid darken($bgrey, 5%);
+					
+					&:hover{
+						background: $orange;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+@media only screen and (min-width: 1030px) {
+	
+}
+
+@media only screen and (min-width: 1240px) {
+	
+}
