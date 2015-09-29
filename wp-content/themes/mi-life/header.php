@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 
-<title><?php wp_title(''); ?></title>
+<title><?php wp_title(); ?></title>
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -36,13 +36,15 @@
 		
 			<header class="page-header">
 	
-				<!-- use h1 or img -->
-				<!--<h1><a href="<?php /* echo home_url(); */ ?>" rel="nofollow"><?php /* bloginfo('name'); */ ?></a></h1>-->
-				
-				<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/general/logo.png" class="main-logo" alt=""></a>
+				<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/general/dorset-accessible-home-service.png" class="" alt=""></a>
+			
+				<p>For further information<br>
+				Call 0800 130 0011</p>
+			
+			<?php wp_nav_menu( array( 'menu' => 'Main Menu', 'container_class' => 'main-menu' ) ); ?>
 			
 			</header>
 			
 			<div id="toggle">Menu<span></span></div>
 			
-			<?php wp_nav_menu( array( 'menu' => 'Main Menu', 'container_class' => 'main-menu' ) ); ?>
+			
