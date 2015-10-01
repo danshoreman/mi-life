@@ -1,10 +1,14 @@
 <?php get_header(); ?>
 	
-	<div class="row">
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
-		<div class="small-12 columns" role="main">
+	<div class="home-map">
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/home/map.png" alt="" class="">
+	</div>
+	
+	<div class="row">
 
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<div class="small-12 columns" role="main">
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 				

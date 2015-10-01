@@ -41,19 +41,19 @@ form label {
 }
 form input,
 form textarea {
-  border: 1px solid #e4e6e8;
+  border: 1px solid #e5e5e5;
   padding: 0.8rem;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'bariol_regularregular';
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 form #submit,
 form #searchsubmit {
-  border: 1px solid #f2f3f4;
+  border: 1px solid #f2f2f2;
   padding: 0.8rem 1.5rem;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #f2f3f4;
+  font-family: 'bariol_regularregular';
+  background: #f2f2f2;
   color: #343434;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -66,7 +66,7 @@ form #searchsubmit {
 }
 form #submit:hover,
 form #searchsubmit:hover {
-  background: #e4e6e8;
+  background: #e5e5e5;
 }
 
 meta.foundation-version {
@@ -1416,7 +1416,7 @@ select {
 GENERAL STYLES
 *********************/
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'bariol_regularregular';
   color: #343434;
   -webkit-font-smoothing: antialiased;
 }
@@ -1444,7 +1444,7 @@ LINK STYLES
 *********************/
 a, a:visited,
 .gen-link {
-  color: #40859b;
+  color: #92278f;
   text-decoration: underline;
 }
 a:hover, a:visited:hover,
@@ -1456,7 +1456,6 @@ a:hover, a:visited:hover,
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
 }
 
@@ -1483,17 +1482,35 @@ h5, .h5 {
 .main-menu {
   display: none;
 }
+.main-menu #menu-main-menu {
+  margin: 0;
+  padding: 0;
+}
+.main-menu #menu-main-menu li {
+  list-style-type: none;
+}
+.main-menu #menu-main-menu li a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid purple;
+}
+.main-menu #menu-main-menu li:last-child a {
+  border-bottom: none;
+}
 
 #toggle {
   display: block;
   cursor: pointer;
-  background: #506675;
-  width: 100%;
+  width: 100px;
   height: 50px;
   line-height: 50px;
   padding: 0 1rem;
   position: relative;
-  color: #f2f3f4;
+  color: #92278f;
+  position: absolute;
+  right: 20px;
+  top: 12px;
 }
 
 #toggle span:after,
@@ -1520,7 +1537,7 @@ h5, .h5 {
 #toggle span:before {
   width: 30px;
   height: 5px;
-  background-color: #8299a9;
+  background-color: #92278f;
   backface-visibility: hidden;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -1530,10 +1547,114 @@ h5, .h5 {
 @media only screen and (min-width: 768px) {
   .main-menu {
     display: block;
+    float: left;
+    margin: 35px 0 0 20px;
+  }
+  .main-menu #menu-main-menu li {
+    float: left;
+    margin-right: 0.7rem;
+  }
+  .main-menu #menu-main-menu li a {
+    display: block;
+    padding: 0;
+    border-bottom: none;
   }
 
   #toggle {
     display: none;
+  }
+}
+.page-header {
+  padding-top: 0.5rem;
+  position: relative;
+}
+.page-header .main-logo {
+  width: 170px;
+  display: block;
+  background: blue;
+}
+.page-header .contact-wrap {
+  margin: 1rem 0 0 0;
+}
+.page-header .contact-wrap:before, .page-header .contact-wrap:after {
+  content: " ";
+  display: table;
+}
+.page-header .contact-wrap:after {
+  clear: both;
+}
+.page-header .contact-wrap .contact-info {
+  color: #92278f;
+  display: inline-block;
+  margin: 0;
+  width: 50%;
+  height: 40px;
+  float: left;
+}
+.page-header .contact-wrap .resize {
+  margin: 0 20px 0 0;
+  padding: 0;
+  height: 40px;
+  float: right;
+  vertical-align: bottom;
+}
+.page-header .contact-wrap .resize li {
+  float: left;
+  list-style-type: none;
+  line-height: 40px;
+  margin-left: 0.5rem;
+}
+.page-header .contact-wrap .resize li a {
+  color: #92278f;
+  text-decoration: none;
+  font-weight: bold;
+}
+.page-header .contact-wrap .resize li a.sm {
+  font-size: 14px;
+}
+.page-header .contact-wrap .resize li a.md {
+  font-size: 16px;
+}
+.page-header .contact-wrap .resize li a.lg {
+  font-size: 22px;
+}
+.page-header .contact-wrap .resize li a:hover {
+  border-bottom: 2px solid #30af51;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-header {
+    padding-top: 1rem;
+    position: relative;
+  }
+  .page-header .main-logo {
+    float: left;
+    width: 190px;
+  }
+  .page-header .contact-wrap {
+    width: 300px;
+    float: right;
+    position: relative;
+    margin: 0;
+  }
+  .page-header .contact-wrap .contact-info {
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    text-align: right;
+    float: none;
+  }
+  .page-header .contact-wrap .resize {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: none;
+    height: 20px;
+  }
+  .page-header .contact-wrap .resize li {
+    line-height: 20px;
   }
 }
 @font-face {
@@ -1848,6 +1969,17 @@ h5, .h5 {
     /*The size of the normal image, half the size of the hi-res image*/
   }
 }
+.home-map {
+  margin: 1rem auto;
+  max-width: 1200px;
+}
+
 /* Base stuff here */
+@media only screen and (min-width: 768px) {
+  .home-map {
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
