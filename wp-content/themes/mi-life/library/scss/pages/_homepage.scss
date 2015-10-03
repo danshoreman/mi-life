@@ -1,11 +1,47 @@
 
 .home-map{
-	margin: 1rem auto;
+	margin: 0 auto;
 	max-width: 1200px;
+	position: relative;
+	z-index: 1;
+	
+	.down-arrow{
+		position: absolute;
+		bottom: -25px;
+		left: 50%;
+		margin-left: -25px;
+		z-index: 2;	
+	}
 }
 
+.page{
+	
+	.entry-content{
+		padding-top: 2rem;
+		max-width: 860px;
+		margin: auto;
+		text-align: center;
+		
+		p:first-of-type{
+			color: $purp;
+			font-weight: bold;
+		}
+		
+		ul{
+			text-align: left;
+			border-top: 2px solid $purp;
+			border-bottom: 2px solid $purp;
+			margin: 2rem 0;
+			padding: 2rem 0;
+			
+			li{
+				margin-left: 1rem;
+				color: $purp;
+			}
+		}
+	}
+}
 
-/* Base stuff here */
 
 
 @media only screen and (min-width: 640px) {

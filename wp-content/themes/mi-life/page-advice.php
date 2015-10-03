@@ -2,28 +2,17 @@
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
-	<div class="home-map">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/home/map.png" alt="" class="">
-		<div class="down-arrow"></div>
-	</div>
-	
 	<div class="row">
 
 		<div class="small-12 columns" role="main">
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 				
-				<!--
-<header class="article-header">
+				<header class="article-header">
 					
-					<h1>
-						
-						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-					
-					</h1>
+					<h1><?php the_title(); ?></h1>
 				
 				</header>
--->
 				
 				<section class="entry-content">
 					

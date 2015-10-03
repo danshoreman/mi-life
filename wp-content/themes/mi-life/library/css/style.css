@@ -1419,6 +1419,7 @@ body {
   font-family: 'bariol_regularregular';
   color: #343434;
   -webkit-font-smoothing: antialiased;
+  background: #f2f2f2;
 }
 
 img,
@@ -1437,6 +1438,15 @@ LAYOUT & GRID STYLES
 *********************/
 p {
   line-height: 1.3;
+}
+
+.down-arrow {
+  width: 50px;
+  height: 50px;
+  background: #92278f;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
 }
 
 /*********************
@@ -1483,7 +1493,7 @@ h5, .h5 {
   display: none;
 }
 .main-menu #menu-main-menu {
-  margin: 0;
+  margin: 0.5rem 0 0 0;
   padding: 0;
 }
 .main-menu #menu-main-menu li {
@@ -1493,10 +1503,7 @@ h5, .h5 {
   display: block;
   text-decoration: none;
   padding: 0.5rem 0;
-  border-bottom: 1px solid purple;
-}
-.main-menu #menu-main-menu li:last-child a {
-  border-bottom: none;
+  border-top: 1px solid #f2f2f2;
 }
 
 #toggle {
@@ -1509,7 +1516,7 @@ h5, .h5 {
   position: relative;
   color: #92278f;
   position: absolute;
-  right: 20px;
+  right: 10px;
   top: 12px;
 }
 
@@ -1548,7 +1555,7 @@ h5, .h5 {
   .main-menu {
     display: block;
     float: left;
-    margin: 35px 0 0 20px;
+    margin: 28px 0 0 20px;
   }
   .main-menu #menu-main-menu li {
     float: left;
@@ -1557,33 +1564,60 @@ h5, .h5 {
   .main-menu #menu-main-menu li a {
     display: block;
     padding: 0;
-    border-bottom: none;
+    border-top: none;
   }
 
   #toggle {
     display: none;
   }
 }
-.page-header {
-  padding-top: 0.5rem;
-  position: relative;
+@media only screen and (min-width: 1000px) {
+  .main-menu {
+    margin: 53px 0 0 20px;
+  }
+  .main-menu #menu-main-menu li {
+    float: left;
+    margin-right: 0.8rem;
+  }
+  .main-menu #menu-main-menu li a {
+    font-size: 1.2rem;
+  }
 }
-.page-header .main-logo {
+@media only screen and (min-width: 1100px) {
+  .main-menu {
+    margin-left: 70px;
+  }
+  .main-menu #menu-main-menu li {
+    margin-right: 1.5rem;
+  }
+}
+.header-wrap {
+  background: #ffffff;
+  width: 100%;
+}
+.header-wrap .page-header {
+  padding: 0.5rem 0;
+  position: relative;
+  background: #ffffff;
+}
+.header-wrap .page-header .main-logo {
   width: 170px;
   display: block;
   background: blue;
 }
-.page-header .contact-wrap {
-  margin: 1rem 0 0 0;
+.header-wrap .page-header .contact-wrap {
+  margin: 0.5rem 0 0 0;
+  padding: 0.5rem 0 0 0;
+  border-top: 1px solid #f2f2f2;
 }
-.page-header .contact-wrap:before, .page-header .contact-wrap:after {
+.header-wrap .page-header .contact-wrap:before, .header-wrap .page-header .contact-wrap:after {
   content: " ";
   display: table;
 }
-.page-header .contact-wrap:after {
+.header-wrap .page-header .contact-wrap:after {
   clear: both;
 }
-.page-header .contact-wrap .contact-info {
+.header-wrap .page-header .contact-wrap .contact-info {
   color: #92278f;
   display: inline-block;
   margin: 0;
@@ -1591,53 +1625,56 @@ h5, .h5 {
   height: 40px;
   float: left;
 }
-.page-header .contact-wrap .resize {
-  margin: 0 20px 0 0;
+.header-wrap .page-header .contact-wrap .resize {
+  margin: 0 15px 0 0;
   padding: 0;
   height: 40px;
   float: right;
   vertical-align: bottom;
 }
-.page-header .contact-wrap .resize li {
+.header-wrap .page-header .contact-wrap .resize li {
   float: left;
   list-style-type: none;
   line-height: 40px;
   margin-left: 0.5rem;
 }
-.page-header .contact-wrap .resize li a {
+.header-wrap .page-header .contact-wrap .resize li a {
   color: #92278f;
   text-decoration: none;
   font-weight: bold;
 }
-.page-header .contact-wrap .resize li a.sm {
+.header-wrap .page-header .contact-wrap .resize li a.sm {
   font-size: 14px;
 }
-.page-header .contact-wrap .resize li a.md {
+.header-wrap .page-header .contact-wrap .resize li a.md {
   font-size: 16px;
 }
-.page-header .contact-wrap .resize li a.lg {
+.header-wrap .page-header .contact-wrap .resize li a.lg {
   font-size: 22px;
 }
-.page-header .contact-wrap .resize li a:hover {
+.header-wrap .page-header .contact-wrap .resize li a:hover {
   border-bottom: 2px solid #30af51;
 }
 
 @media only screen and (min-width: 768px) {
-  .page-header {
-    padding-top: 1rem;
+  .header-wrap .page-header {
+    padding: 1rem 0;
     position: relative;
   }
-  .page-header .main-logo {
+  .header-wrap .page-header .main-logo {
     float: left;
     width: 190px;
   }
-  .page-header .contact-wrap {
-    width: 300px;
+  .header-wrap .page-header .contact-wrap {
+    width: 190px;
+    height: 60px;
     float: right;
     position: relative;
     margin: 0;
+    padding: 0;
+    border-top: none;
   }
-  .page-header .contact-wrap .contact-info {
+  .header-wrap .page-header .contact-wrap .contact-info {
     width: 200px;
     position: absolute;
     top: 20px;
@@ -1645,7 +1682,7 @@ h5, .h5 {
     text-align: right;
     float: none;
   }
-  .page-header .contact-wrap .resize {
+  .header-wrap .page-header .contact-wrap .resize {
     margin: 0;
     position: absolute;
     top: 0;
@@ -1653,10 +1690,43 @@ h5, .h5 {
     float: none;
     height: 20px;
   }
-  .page-header .contact-wrap .resize li {
+  .header-wrap .page-header .contact-wrap .resize li {
     line-height: 20px;
   }
 }
+@media only screen and (min-width: 1000px) {
+  .header-wrap .page-header {
+    padding-top: 1rem;
+    position: relative;
+  }
+  .header-wrap .page-header .main-logo {
+    float: left;
+    width: 270px;
+    margin-left: 20px;
+  }
+  .header-wrap .page-header .contact-wrap {
+    width: 250px;
+    height: 80px;
+    margin: 0 20px 0 0;
+    border-top: none;
+  }
+  .header-wrap .page-header .contact-wrap .contact-info {
+    top: 35px;
+    font-size: 1.2rem;
+  }
+  .header-wrap .page-header .contact-wrap .resize {
+    height: 35px;
+  }
+  .header-wrap .page-header .contact-wrap .resize li {
+    line-height: 35px;
+  }
+}
+.page-footer {
+  background: #00a69c;
+  text-align: center;
+  color: #ffffff;
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?vd1gmu");
@@ -1970,11 +2040,41 @@ h5, .h5 {
   }
 }
 .home-map {
-  margin: 1rem auto;
+  margin: 0 auto;
   max-width: 1200px;
+  position: relative;
+  z-index: 1;
+}
+.home-map .down-arrow {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -25px;
+  z-index: 2;
 }
 
-/* Base stuff here */
+.page .entry-content {
+  padding-top: 2rem;
+  max-width: 860px;
+  margin: auto;
+  text-align: center;
+}
+.page .entry-content p:first-of-type {
+  color: #92278f;
+  font-weight: bold;
+}
+.page .entry-content ul {
+  text-align: left;
+  border-top: 2px solid #92278f;
+  border-bottom: 2px solid #92278f;
+  margin: 2rem 0;
+  padding: 2rem 0;
+}
+.page .entry-content ul li {
+  margin-left: 1rem;
+  color: #92278f;
+}
+
 @media only screen and (min-width: 768px) {
   .home-map {
     padding-left: 0.9375em;

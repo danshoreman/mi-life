@@ -3,7 +3,7 @@
 	display: none;
 	
 	#menu-main-menu{
-		margin: 0;
+		margin: 0.5rem 0 0 0;
 		padding: 0;
 		
 		li{
@@ -13,11 +13,7 @@
 				display: block;
 				text-decoration: none;
 				padding: 0.5rem 0;
-				border-bottom: 1px solid purple;	
-			}
-			
-			&:last-child a{
-				border-bottom: none;
+				border-top: 1px solid $lgrey;	
 			}
 		}
 	}
@@ -33,7 +29,7 @@
 	position: relative;
 	color: $purp;
 	position: absolute;
-	right: 20px;
+	right: 10px;
 	top: 12px;
 }
 
@@ -75,7 +71,7 @@
 	.main-menu{
 		display: block;
 		float: left;
-		margin: 35px 0 0 20px;
+		margin: 28px 0 0 20px;
 		
 		#menu-main-menu{
 			
@@ -86,7 +82,7 @@
 				a{
 					display: block;
 					padding: 0;
-					border-bottom: none;	
+					border-top: none;	
 				}
 			}
 		}
@@ -97,10 +93,35 @@
 	}
 }
 
-@media only screen and (min-width: 1030px) {
-	
+@media only screen and (min-width: 1000px) {
+
+	.main-menu{
+		margin: 53px 0 0 20px;
+		
+		#menu-main-menu{
+			
+			li{
+				float: left;
+				margin-right: 0.8rem;
+					
+				a{
+					font-size: 1.2rem
+				}
+			}
+		}
+	}
 }
 
-@media only screen and (min-width: 1240px) {
-	
+@media only screen and (min-width: 1100px) {
+
+	.main-menu{
+		margin-left: 70px;
+		
+		#menu-main-menu{
+			
+			li{
+				margin-right: 1.5rem;
+			}
+		}
+	}
 }
