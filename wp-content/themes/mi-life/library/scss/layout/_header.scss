@@ -10,7 +10,6 @@
 		.main-logo{
 			width: 170px;
 			display: block;
-			background: blue;
 		}
 		
 		.contact-wrap{
@@ -72,6 +71,7 @@
 		.page-header{
 			padding: 1rem 0;
 			position: relative;
+			@include clearfix;
 			
 			.main-logo{
 				float: left;

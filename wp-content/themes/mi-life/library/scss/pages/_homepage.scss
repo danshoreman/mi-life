@@ -14,17 +14,52 @@
 	}
 }
 
+
+.title-block{
+	background: $purp;
+	text-align: center;
+	border-bottom: 3px solid $green;
+	padding: 1.5rem 0;
+	
+	.title-icon{
+		width: 75px;
+		height: 75px;
+		margin-bottom: 0.5rem;
+	}
+	
+	h1{
+		margin: 0;
+		line-height: 1;
+		text-transform: uppercase;
+		color: $white;
+		font-size: 1.6rem;
+		@include h-font;
+		letter-spacing: 1px;
+	}
+}
+
+.page-id-8 .title-block,
+.page-id-10 .title-block,
+.page-id-18 .title-block{
+	padding: 3rem 0;
+}
+
 .page{
 	
 	.entry-content{
 		padding-top: 2rem;
-		max-width: 860px;
+		max-width: 850px;
 		margin: auto;
 		text-align: center;
 		
 		p:first-of-type{
 			color: $purp;
 			font-weight: bold;
+		}
+		
+		img{
+			width: 100%;
+			height: auto;
 		}
 		
 		ul{
@@ -37,7 +72,39 @@
 			li{
 				margin-left: 1rem;
 				color: $purp;
+				position: relative;
+				list-style-type: none;
+								
+				&:before{
+					position: absolute;
+			    left: -20px;
+			    top: 5px;
+			    content: '';
+			    display: block;
+			    width: 10px;
+			    height: 10px;
+					background: url(../images/general/arrow.svg) center center no-repeat;
+					@include back-size(contain);
+				}
 			}
+		}
+	}
+	
+	.to-top{
+		background: $green;
+		color: darken($purp, 10%);
+		padding: 0.8rem 1.4rem;
+		margin: 2rem 0 4rem 0;
+		display: inline-block;
+		text-transform: uppercase;
+		text-decoration: none;
+		cursor: pointer;
+		@include border-radius(50px);
+		@include transition();
+		@include h-font;
+		
+		&:hover{
+			background: darken($green, 5%);
 		}
 	}
 }
@@ -54,10 +121,112 @@
 		padding-left: 0.9375em;
     padding-right: 0.9375em;
 	}
+	
+	.title-block{
+		padding: 2.5rem 0;
+		
+		.title-icon{
+			width: 100px;
+			height: 100px;
+		}
+		
+		h1{
+			font-size: 2rem;
+		}
+	}
+	
+	.page-id-8 .title-block,
+	.page-id-10 .title-block,
+	.page-id-18 .title-block{
+		padding: 5rem 0;
+	}
+	
+	.page{
+	
+		.entry-content{
+			padding-top: 3rem;
+			
+			p{
+				font-size: 1.2rem;
+				
+				&:first-of-type{
+					font-size: 1.4rem;
+				}
+			}
+			
+			ul{
+				margin: 3rem 0;
+				padding: 3rem 2rem;
+				border-top: 3px solid $purp;
+				border-bottom: 3px solid $purp;
+				
+				li{
+					font-size: 1.2rem;
+					margin-left: 1.2rem;
+					
+					&:before{
+						top: 8px;
+				    width: 16px;
+				    height: 16px;
+				    left: -25px;
+				  }
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: 1030px) {
+
+	.title-block{
+		border-bottom: 5px solid $green;
+		
+		.title-icon{
+			width: 130px;
+			height: 130px;
+			margin-bottom: 1rem;
+		}
+		
+		h1{
+			font-size: 2.6rem;
+		}
+	}
 	
+	.page-id-8 .title-block,
+	.page-id-10 .title-block,
+	.page-id-18 .title-block{
+		padding: 6rem 0;
+	}
+
+	.page{
+	
+		.entry-content{
+			padding-top: 4rem;
+			
+			p{
+				font-size: 1.3rem;
+				
+				&:first-of-type{
+					font-size: 1.5rem;
+				}
+			}
+			
+			ul{
+				margin: 4rem 0;
+				padding: 3rem 3rem 3rem 1rem;
+				
+				li{
+					font-size: 1.3rem;
+					
+					&:before{
+						top: 7px;
+				    width: 14px;
+				    height: 14px;
+				  }
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: 1240px) {

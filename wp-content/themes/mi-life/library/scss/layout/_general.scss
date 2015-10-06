@@ -38,8 +38,156 @@ p{
 	width: 50px;
 	height: 50px;
 	background: $purp;
+	position: relative;
 	@include border-radius(25px);
+	
+	&:after{
+		content: '';
+		position: absolute;
+    left: 2px;
+    top: 2px;
+    content: '';
+    display: block;
+    width: 46px;
+    height: 46px;
+		background: url(../images/general/down-arrow.svg) center center no-repeat;
+		@include back-size(contain);
+	}
 }
+
+.our-services{
+	background: $purp;
+	position: relative;
+	z-index: 1;
+	padding: 2rem 0;
+	margin: 2rem 0 0 0;
+	
+	h2{
+		text-align: center;
+		color: $white;
+		text-transform: uppercase;
+		@include h-font;
+	}
+	
+	.service-copy{
+		text-align: center;
+		min-height: 310px;
+		position: relative;
+		margin-bottom: 20px;
+		
+		.serv-icon{
+			width: 75px;
+			height: 75px;
+			margin: auto;
+		}
+		
+		h3,p{
+			color: $white;
+		}
+		
+		h3{
+			line-height: 1;
+			margin: 0.5rem;
+			font-size: 1.2rem;
+			@include h-font;
+			text-transform: uppercase;
+		}
+		
+		p{
+			margin-top: 0;
+		}
+		
+		.read-more{
+			background: $green;
+			color: darken($purp, 10%);
+			padding: 0.7rem 1.2rem;
+			display: inline-block;
+			text-transform: uppercase;
+			text-decoration: none;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 130px;
+			margin-left: -65px;
+			@include border-radius(50px);
+			@include transition();
+			@include h-font;
+			
+			&:hover{
+				background: darken($green, 5%);
+			}
+		}
+	}
+	
+	.down-arrow{
+		position: absolute;
+		top: -25px;
+		left: 50%;
+		margin-left: -25px;
+		z-index: 2;	
+	}
+}
+
+.page-id-8 .our-services{
+	margin-top: 0;
+	
+	h2{
+		display: none;
+	}
+	
+	.down-arrow{
+		display: none;
+	}
+}
+
+
+@media only screen and (min-width: 600px) {
+
+	.our-services .service-copy{
+			min-height: 260px;
+	}
+}
+
+@media only screen and (min-width: 1030px) {
+
+	.our-services{
+		padding: 3rem 0 7rem 0;
+		margin: 4rem 0 0 0;
+		
+		.serv-content{
+			max-width: 960px;
+		}
+		
+		h2{
+			margin-bottom: 3rem;
+			font-size: 2.4rem;
+		}
+		
+		.service-copy{
+			min-height: 380px;
+			
+			.serv-icon{
+				width: 120px;
+				height: 120px;
+			}
+			
+			h3{
+				margin: 1rem 0;
+			}
+			
+			p{
+				padding: 0 1.5rem;
+			}
+			
+			.read-more{
+				padding: 0.8rem 1.3rem;
+				width: 150px;
+				margin-left: -80px;
+			}
+		}
+	}
+}
+
 
 /*********************
 LINK STYLES

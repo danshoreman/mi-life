@@ -18,6 +18,7 @@
 						</a>
 					<?php endif; ?>
 					<?php the_content(); ?>
+					<div class="to-top">Back to top</div>
 				</section>
 			</article>
 			<?php endwhile; ?>
@@ -33,6 +34,5 @@
 			<?php endif; ?>
 		</div>
 	</div>
-	<?php include_once('partials/our-services.php'); ?>
 
 <?php get_footer();

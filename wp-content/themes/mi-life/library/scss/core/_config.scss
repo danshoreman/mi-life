@@ -72,7 +72,9 @@ $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 @mixin b-font{
 	font-family: 'bariol_regularregular';
 }
-$font:       'Lato', $sans-serif;
+@mixin h-font{
+	font-family: 'oswaldbold';
+}
 
 
 /*******************************

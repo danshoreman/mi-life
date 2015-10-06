@@ -29,6 +29,7 @@
 
 </head>
 <body <?php body_class(); ?>>
+<a id="top-anchor"></a>
 <div class="header-wrap">
 	<div class="row">
 		<div class="small-12 columns">
