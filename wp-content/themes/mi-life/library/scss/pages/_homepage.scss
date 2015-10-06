@@ -171,6 +171,16 @@
 				    left: -25px;
 				  }
 				}
+				
+				&.third-list{
+				
+					li{
+						width: 47%;
+				    float: left;
+				    font-size: 1.2rem;
+					}	
+					@include clearfix;
+				}
 			}
 		}
 	}
@@ -223,6 +233,12 @@
 				    width: 14px;
 				    height: 14px;
 				  }
+				}
+				&.third-list{
+				
+					li{
+						width: 30.8%;
+					}	
 				}
 			}
 		}

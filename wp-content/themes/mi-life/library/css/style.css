@@ -2265,6 +2265,18 @@ h5, .h5 {
     height: 16px;
     left: -25px;
   }
+  .page .entry-content ul.third-list li {
+    width: 47%;
+    float: left;
+    font-size: 1.2rem;
+  }
+  .page .entry-content ul.third-list:before, .page .entry-content ul.third-list:after {
+    content: " ";
+    display: table;
+  }
+  .page .entry-content ul.third-list:after {
+    clear: both;
+  }
 }
 
 @media only screen and (min-width: 1030px) {
@@ -2304,6 +2316,9 @@ h5, .h5 {
     top: 7px;
     width: 14px;
     height: 14px;
+  }
+  .page .entry-content ul.third-list li {
+    width: 30.8%;
   }
 }
 
