@@ -57,3 +57,16 @@ function new_excerpt_more( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+
+// Add svg uploads
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+
+// Disable Emoji
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' ); 

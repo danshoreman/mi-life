@@ -1,0 +1,103 @@
+
+.pre-footer{
+	background: $white;
+	padding: 1rem 0;
+	
+	.footer-logo{
+		display: block;
+    margin: 0 auto 1.5rem auto;
+    width: 200px;
+    
+    img{
+	    width: 200px;
+	    height: auto;
+    }
+    
+    &.mhc{
+	    margin-bottom: 0;
+    }
+	}
+	
+	.contact-number{
+		color: $purp;
+		margin: 0 auto 1.5rem auto;
+    width: 200px;
+    font-size: 1.2rem;
+	}
+}
+
+.page-footer{
+	background: $turq;
+	text-align: center;
+	color: $white;
+}
+
+@media only screen and (min-width: 642px) {
+
+	.pre-footer{
+		padding: 2rem 0;
+		
+		.footer-logo{
+			margin: 0 auto;
+	    width: 100%;
+	    text-align: right;
+	    
+	    img{
+		    width: auto;
+		    height: 50px;
+		  }
+		  
+		  &.mhc{
+		    text-align: left;
+	    }
+		}
+		
+		.contact-number{
+			margin: 0 auto;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+	.pre-footer{
+		padding: 2rem 0;
+		
+		.footer-logo{
+			text-align: center;
+			border-right: 1px solid $purp;
+	    
+	    img{
+		    width: auto;
+		    height: 50px;
+		  }
+		  
+		  &.mhc{
+		    text-align: center;
+		    border-right: none;
+		    border-left: 1px solid $purp;
+	    }
+		}
+	}
+}
+
+@media only screen and (min-width: 1030px) {
+
+	.pre-footer{
+		padding: 4rem 0;
+		
+		.footer-logo{
+			
+	    img{
+		    height: 70px;
+		  }
+		}
+		
+		.contact-number{
+			width: 250px;
+			font-size: 1.6rem;
+			margin-top: 0.5rem;
+		}
+	}
+}
+

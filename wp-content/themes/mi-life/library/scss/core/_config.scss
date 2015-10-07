@@ -18,7 +18,14 @@
   2: Base Font Sizing & Styling
 *******************************/
 
-
+@mixin clearfix{
+  
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
 
 
 /*******************************
@@ -30,20 +37,21 @@
 $black:             #242424;
 $white:             #ffffff;
 
-$lgrey:        			#f2f3f4;
+
 $grey:              #343434;
 $dgrey:							#313131;
 $bgrey:							#506675;
 $text:							#484848;
 
-$blue:							#40859b;
-$orange:						#d3492f;
-$red:								#e73e35;
-$yellow:						#e8f01a;
-$green:							#90e140;
+
+$purp:							#92278f;
+$turq:							#00a69c;
+$lblue:							#80ccf3;
+$green:							#30af51;
+$lgrey:        			#f2f2f2;
 
 
-$link-color:        $blue;
+$link-color:        $purp;
 $link-hover:        darken($link-color, 10%);
 
 
@@ -60,8 +68,13 @@ $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 
 // Change these to your own
-$header-font:       'Lato', $sans-serif;
-$body-font:		      'Lato', $sans-serif;
+
+@mixin b-font{
+	font-family: 'bariol_regularregular';
+}
+@mixin h-font{
+	font-family: 'oswaldbold';
+}
 
 
 /*******************************

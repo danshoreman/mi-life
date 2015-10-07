@@ -19,6 +19,12 @@
 		    }
 		});
 		
+		$('.to-top').click(function(){
+			$('#top-anchor').ScrollTo({
+				duration: 500
+			});
+		});
+		
 		
 		
 	});
