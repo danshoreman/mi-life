@@ -117,7 +117,7 @@ p{
 	
 	.service-copy{
 		text-align: center;
-		min-height: 310px;
+		min-height: 350px;
 		position: relative;
 		margin-bottom: 20px;
 		
@@ -196,6 +196,8 @@ p{
 	.acc-title{
 		background: $purp;
 		margin-bottom: 2px;
+		padding-left: 1rem;
+		padding-right: 1rem;
 		
 		span{
 			max-width: 850px;
@@ -275,6 +277,8 @@ p{
 	.accordion{
 		
 		.acc-title{
+			padding-left: 0;
+			padding-right: 0;
 			
 			span{
 				height: 70px;
