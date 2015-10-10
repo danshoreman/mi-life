@@ -30,6 +30,7 @@
 </head>
 <body <?php body_class(); ?>>
 <a id="top-anchor"></a>
+
 <div class="header-wrap">
 	<div class="row">
 		<div class="small-12 columns">
@@ -41,11 +42,15 @@
 				<div class="contact-wrap">
 					<p class="contact-info">For further information<br>
 					Call <strong>0800 130 0011</strong></p>
-					<ul class="resize">
-						<li><a href="" class="sm">A</a></li>
-						<li><a href="" class="md">A</a></li>
-						<li><a href="" class="lg">A</a></li>
+					<!--
+<ul class="resize">
+						<li><span class="sm">A</span></li>
+						<li><span class="md">A</span></li>
+						<li><span class="lg">A</span></li>
 					</ul>
+-->
+					<p class="font-changer"><span class="js-font-decrease">A</span> <span class="js-font-normal">A</span> <span class="js-font-increase">A</span></p>
+					<p id="fontSize"></p>
 				</div>
 				<?php wp_nav_menu( array( 'menu' => 'Main Menu', 'container_class' => 'main-menu' ) ); ?>
 			</header>

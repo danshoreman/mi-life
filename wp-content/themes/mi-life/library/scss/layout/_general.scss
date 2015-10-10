@@ -25,6 +25,52 @@ a img{
 	clear: both;
 }
 
+.font-changer{
+  display: inline-block;
+  margin: 10px 12px 0 0;
+  float: right;
+  color: $purp;
+  line-height: 1;
+  cursor: pointer;
+  
+  span{
+	  margin-left: 5px;
+  }
+}
+
+#fontSize{
+	margin: 0;
+}
+
+.js-font {
+  //should probably set  the font-size to a px/rem/em instead of %
+  &-decrease {
+    font-size: 1rem;
+  }
+  
+  &-normal {
+    font-size: 1.4rem;
+  }
+  
+  &-increase {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+	
+	.font-changer{
+  	margin: -8px 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+	
+	.font-changer{
+  	margin: 0;
+  }
+}
+
 
 /*********************
 LAYOUT & GRID STYLES
@@ -140,6 +186,45 @@ p{
 	}
 }
 
+.accordion{
+	margin: 0;
+	
+	dt, dd{
+		margin: 0;
+	}
+	
+	.acc-title{
+		background: $purp;
+		margin-bottom: 2px;
+		
+		span{
+			max-width: 850px;
+			margin: 0 auto;
+			display: block;
+			cursor: pointer;
+			color: $white;
+			@include h-font;
+			height: 50px;
+			line-height: 50px;
+			
+			.acc-arrow{
+				width: 30px;
+				height: 30px;
+				margin-top: 10px;
+				float: right;
+				@include clearfix;
+			}
+			
+			&.activeBtn{
+				
+				.acc-arrow{
+					@include rotate( 180deg );
+				}
+			}
+		}
+	}
+}
+
 
 @media only screen and (min-width: 600px) {
 
@@ -183,6 +268,24 @@ p{
 				padding: 0.8rem 1.3rem;
 				width: 150px;
 				margin-left: -80px;
+			}
+		}
+	}
+	
+	.accordion{
+		
+		.acc-title{
+			
+			span{
+				height: 70px;
+				line-height: 70px;
+				font-size: 1.3rem;
+				
+				.acc-arrow{
+					width: 40px;
+					height: 40px;
+					margin-top: 15px;
+				}
 			}
 		}
 	}

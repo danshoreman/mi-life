@@ -1241,6 +1241,47 @@ a img {
   clear: both;
 }
 
+.font-changer {
+  display: inline-block;
+  margin: 10px 12px 0 0;
+  float: right;
+  color: #92278f;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.font-changer span {
+  margin-left: 5px;
+}
+
+#fontSize {
+  margin: 0;
+}
+
+.js-font-decrease {
+  font-size: 1rem;
+}
+
+.js-font-normal {
+  font-size: 1.4rem;
+}
+
+.js-font-increase {
+  font-size: 1.8rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .font-changer {
+    margin: -8px 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .font-changer {
+    margin: 0;
+  }
+}
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -1365,6 +1406,54 @@ p {
   display: none;
 }
 
+.accordion {
+  margin: 0;
+}
+
+.accordion dt, .accordion dd {
+  margin: 0;
+}
+
+.accordion .acc-title {
+  background: #92278f;
+  margin-bottom: 2px;
+}
+
+.accordion .acc-title span {
+  max-width: 850px;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'oswaldbold';
+  height: 50px;
+  line-height: 50px;
+}
+
+.accordion .acc-title span .acc-arrow {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  float: right;
+}
+
+.accordion .acc-title span .acc-arrow:before, .accordion .acc-title span .acc-arrow:after {
+  content: " ";
+  display: table;
+}
+
+.accordion .acc-title span .acc-arrow:after {
+  clear: both;
+}
+
+.accordion .acc-title span.activeBtn .acc-arrow {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 @media only screen and (min-width: 600px) {
   .our-services .service-copy {
     min-height: 260px;
@@ -1400,6 +1489,16 @@ p {
     padding: 0.8rem 1.3rem;
     width: 150px;
     margin-left: -80px;
+  }
+  .accordion .acc-title span {
+    height: 70px;
+    line-height: 70px;
+    font-size: 1.3rem;
+  }
+  .accordion .acc-title span .acc-arrow {
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
   }
 }
 
@@ -1513,7 +1612,14 @@ h5, .h5 {
   .main-menu {
     display: block;
     float: left;
-    margin: 28px 0 0 20px;
+    margin: 28px 0 0 40px;
+  }
+  .main-menu #menu-main-menu:before, .main-menu #menu-main-menu:after {
+    content: " ";
+    display: table;
+  }
+  .main-menu #menu-main-menu:after {
+    clear: both;
   }
   .main-menu #menu-main-menu li {
     float: left;
@@ -1523,6 +1629,7 @@ h5, .h5 {
     display: block;
     padding: 0;
     border-top: none;
+    font-size: 1.1rem;
   }
   .main-menu #menu-main-menu li a:hover {
     text-decoration: underline;
@@ -1534,20 +1641,19 @@ h5, .h5 {
 
 @media only screen and (min-width: 1000px) {
   .main-menu {
-    margin: 53px 0 0 20px;
+    margin: 50px 0 0 50px;
   }
   .main-menu #menu-main-menu li {
-    float: left;
     margin-right: 0.8rem;
   }
   .main-menu #menu-main-menu li a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
 @media only screen and (min-width: 1100px) {
   .main-menu {
-    margin-left: 70px;
+    margin-left: 90px;
   }
   .main-menu #menu-main-menu li {
     margin-right: 1.5rem;
@@ -2156,9 +2262,14 @@ h5, .h5 {
   text-align: center;
 }
 
+.page .entry-content p {
+  font-size: 1.2rem;
+}
+
 .page .entry-content p:first-of-type {
   color: #92278f;
   font-weight: bold;
+  font-size: 100%;
 }
 
 .page .entry-content img {
@@ -2179,6 +2290,7 @@ h5, .h5 {
   color: #92278f;
   position: relative;
   list-style-type: none;
+  font-size: 1.2rem;
 }
 
 .page .entry-content ul li:before {
@@ -2205,6 +2317,7 @@ h5, .h5 {
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+  text-align: center;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
@@ -2218,6 +2331,10 @@ h5, .h5 {
 
 .page .to-top:hover {
   background: #2b9b48;
+}
+
+.top-btn {
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2243,12 +2360,6 @@ h5, .h5 {
   .page .entry-content {
     padding-top: 3rem;
   }
-  .page .entry-content p {
-    font-size: 1.2rem;
-  }
-  .page .entry-content p:first-of-type {
-    font-size: 1.4rem;
-  }
   .page .entry-content ul {
     margin: 3rem 0;
     padding: 3rem 2rem;
@@ -2256,7 +2367,6 @@ h5, .h5 {
     border-bottom: 3px solid #92278f;
   }
   .page .entry-content ul li {
-    font-size: 1.2rem;
     margin-left: 1.2rem;
   }
   .page .entry-content ul li:before {
@@ -2268,7 +2378,6 @@ h5, .h5 {
   .page .entry-content ul.third-list li {
     width: 47%;
     float: left;
-    font-size: 1.2rem;
   }
   .page .entry-content ul.third-list:before, .page .entry-content ul.third-list:after {
     content: " ";
@@ -2319,6 +2428,439 @@ h5, .h5 {
   }
   .page .entry-content ul.third-list li {
     width: 30.8%;
+  }
+}
+
+.fancybox-opened .fancybox-skin {
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+}
+
+.heroVid {
+  width: 100%;
+  height: 300px;
+  padding-top: 1rem;
+  background: url(../images/home/geoff.png) 50px bottom no-repeat #4dc1ef;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+.heroVid .meet {
+  color: #262261;
+  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 0.8;
+  border-bottom: 5px solid #ffffff;
+  display: inline-block;
+  font-size: 2.4rem;
+  margin: 0 0 0.3rem 0;
+  padding: 0 0 0.3rem 0;
+}
+
+.heroVid .learn {
+  margin: 0;
+  width: 45%;
+  color: #ffffff;
+  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 0.9;
+}
+
+.heroVid .playBtn {
+  color: #ffffff;
+  text-align: left;
+  display: block;
+  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 0.5rem;
+}
+
+.heroVid .playBtn img {
+  width: 40px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.introPanel {
+  background: #f2f2f2;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.introPanel .thinkText .entry-content {
+  padding-top: 0;
+}
+
+.introPanel .thinkText .thinkTitle {
+  text-transform: uppercase;
+  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #262261;
+}
+
+.introPanel .thinkText h3 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.introPanel .thinkText p {
+  color: #003f3b;
+}
+
+.signUp {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.signUp h4 {
+  font-size: 1.1rem;
+}
+
+.signUp #mc-embedded-subscribe-form .inputWrap {
+  width: 96%;
+  margin: 0 2%;
+  text-align: left;
+  margin-bottom: 0.7rem;
+}
+
+.signUp #mc-embedded-subscribe-form .inputWrap label {
+  margin-bottom: 0;
+}
+
+.signUp #mc-embedded-subscribe-form .inputWrap .input {
+  width: 100%;
+  border: none;
+  background: #e5f6f5;
+  font-family: "bariol_regularregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+.signUp #mc-embedded-subscribe-form .indicates-required {
+  font-size: 0.8rem;
+}
+
+.signUp #mc-embedded-subscribe-form .submitBtn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 96%;
+  margin: 0 2%;
+  background: #fff100;
+  border: none;
+  font-family: "bariol_regularregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.signUp #mc-embedded-subscribe-form .submitBtn:hover {
+  background: #e6d900;
+}
+
+.thinkBlock {
+  background: #00a59b;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.thinkBlock .thinkContent {
+  width: 220px;
+  margin: 0 auto 2rem auto;
+}
+
+.thinkBlock .thinkContent p {
+  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  border-bottom: 5px solid #ffffff;
+  padding-bottom: 0.5rem;
+}
+
+.thinkBlock .thinkContent p .dark {
+  color: #003f3b;
+}
+
+.thinkBlock .thinkContent .threeIcon {
+  width: 100px;
+  height: auto;
+  display: inline-block;
+  float: right;
+  margin-top: 0.5rem;
+}
+
+.thinkBlock .thinkContent:after:before, .thinkBlock .thinkContent:after:after {
+  content: " ";
+  display: table;
+}
+
+.thinkBlock .thinkContent:after:after {
+  clear: both;
+}
+
+.thinkBlock .roundel {
+  position: absolute;
+  right: 0;
+  bottom: -130px;
+  width: 200px;
+  height: 200px;
+  padding-top: 40px;
+  background: #fff100;
+  text-align: center;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  display: none;
+}
+
+.thinkBlock .roundel p {
+  color: #00a59b;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+.thinkBlock .roundel p.large {
+  font-size: 30px;
+  font-family: "bariol_boldbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dealBlock {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.dealBlock .title {
+  margin-bottom: 2rem;
+  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #00a59b;
+  line-height: 1;
+  font-size: 1.6rem;
+}
+
+.dealBlock .dealIcon {
+  height: 130px;
+  display: table;
+  width: 100%;
+}
+
+.dealBlock .dealIcon img {
+  width: 110px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.dealBlock p {
+  font-family: "bariol_boldbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 0 1rem 0;
+}
+
+@media only screen and (min-width: 485px) {
+  .heroVid {
+    background-position: right bottom;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .heroVid {
+    height: 350px;
+    padding-left: 1rem;
+  }
+  .heroVid .meet {
+    font-size: 3.2rem;
+    margin: 1rem 0 0.5rem 0;
+  }
+  .heroVid .learn {
+    font-size: 2.1rem;
+    width: 45%;
+  }
+  .thinkBlock .thinkContent {
+    width: 100%;
+    margin: 0;
+  }
+  .thinkBlock .thinkContent p {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  .thinkBlock .thinkContent .threeIcon {
+    width: 70px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .heroVid {
+    height: 500px;
+  }
+  .heroVid .meet {
+    font-size: 3.8rem;
+  }
+  .heroVid .learn {
+    font-size: 2.6rem;
+    width: 40%;
+  }
+  .introPanel {
+    padding: 4rem 0;
+  }
+  .introPanel .thinkText {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .introPanel .thinkText .thinkTitle {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #92278f;
+  }
+  .introPanel .thinkText h3 {
+    font-size: 1.5rem;
+    color: #92278f;
+  }
+  .introPanel .thinkText p {
+    font-size: 1.2rem;
+  }
+  .signUp #mc-embedded-subscribe-form {
+    width: 650px;
+    margin: 0 auto;
+  }
+  .signUp #mc-embedded-subscribe-form .inputWrap {
+    width: 40%;
+    margin: 0 1%;
+    height: 50px;
+    float: left;
+  }
+  .signUp #mc-embedded-subscribe-form .inputWrap label {
+    height: 20px;
+    margin-bottom: 5px;
+  }
+  .signUp #mc-embedded-subscribe-form .indicates-required {
+    font-size: 0.8rem;
+  }
+  .signUp #mc-embedded-subscribe-form .submitBtn {
+    width: 14%;
+    float: left;
+    height: 50px;
+    margin: 25px 1% 0 1%;
+    border: none;
+  }
+  .thinkBlock .thinkContent {
+    margin: 0 auto;
+  }
+  .thinkBlock .thinkContent p {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .thinkBlock .thinkContent .threeIcon {
+    width: 85px;
+  }
+  .thinkBlock .roundel {
+    display: block;
+  }
+  .dealBlock {
+    padding: 3rem 0;
+  }
+  .dealBlock .dealInner {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+  .dealBlock .dealInner .title {
+    font-size: 1.8rem;
+  }
+  .dealBlock .dealInner .dealIcon {
+    height: 155px;
+  }
+  .dealBlock .dealInner .dealIcon img {
+    width: 130px;
+  }
+  .dealBlock .dealInner p {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  .heroVid {
+    height: 650px;
+  }
+  .heroVid .meet {
+    font-size: 4.6rem;
+    width: 300px;
+    border-bottom: 7px solid #ffffff;
+  }
+  .heroVid .learn {
+    font-size: 3.4rem;
+    width: 40%;
+  }
+  .heroVid .playBtn {
+    text-align: left;
+    display: block;
+    margin-top: 0.5rem;
+    width: 90px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .heroVid .playBtn img {
+    width: 100%;
+    display: block;
+    margin-right: 0;
+  }
+  .introPanel {
+    padding: 3rem 0;
+  }
+  .introPanel .thinkText .thinkTitle {
+    font-size: 3.6rem;
+  }
+  .introPanel .thinkText h3 {
+    font-size: 1.7rem;
+  }
+  .signUp {
+    text-align: center;
+    padding: 5rem 0;
+  }
+  .signUp h4 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .signUp .indicates-required {
+    margin-bottom: 1rem;
+  }
+  .thinkBlock {
+    padding: 4rem 0;
+  }
+  .thinkBlock .thinkContent {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .thinkBlock .thinkContent p {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+  .thinkBlock .thinkContent .threeIcon {
+    width: 130px;
+  }
+  .thinkBlock .roundel {
+    right: 10%;
+  }
+  .dealBlock {
+    padding: 5rem 0;
+    text-align: center;
+  }
+  .dealBlock .dealInner .title {
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .heroVid {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    background-image: url(../images/home/geoffFull.png);
+    background-position: 90% top;
+  }
+  .heroVid .meet {
+    font-size: 5.2rem;
+  }
+  .heroVid .learn {
+    font-size: 3.4rem;
+    width: 38%;
   }
 }
 
