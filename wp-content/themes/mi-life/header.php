@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 
-<title><?php wp_title(); ?></title>
+<title><?php wp_title('Dorset Accessible Home Service'); ?></title>
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
