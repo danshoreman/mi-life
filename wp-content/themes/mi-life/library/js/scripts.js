@@ -26,6 +26,7 @@
 			});
 		});
 		
+		
 		// Accordian Script 
     var allPanels = $('.accordion > dd').hide();
     var allBtns = $('.accordion > dt > span');
@@ -62,10 +63,23 @@
 					media : {}
 				}
 			});
+			
+			
 		
 	});
 
 })(jQuery);
+
+if (!Modernizr.svg) {
+    var imgs = document.getElementsByTagName('img');
+    var svgExtension = /.*\.svg$/
+    var l = imgs.length;
+    for(var i = 0; i < l; i++) {
+        if(imgs[i].src.match(svgExtension)) {
+            imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+        }
+    }
+}
 
 
 (function($) {

@@ -58,7 +58,7 @@
 		
 		p:first-of-type{
 			color: $purp;
-			font-weight: bold;
+			font-family: $barbold;
 			font-size: 100%;
 		}
 		
@@ -89,6 +89,7 @@
 			    display: block;
 			    width: 10px;
 			    height: 10px;
+					background: url(../images/general/arrow.png) center center no-repeat;
 					background: url(../images/general/arrow.svg) center center no-repeat;
 					@include back-size(contain);
 				}
@@ -118,6 +119,45 @@
 
 .top-btn{
 	text-align: center;
+}
+
+.post-not-found{
+	border: 1px solid darken($lgrey, 10%);
+	margin: 2rem 0;
+	background: $white;
+	padding: 2rem;
+	
+	h1{
+		margin-top: 0;
+	}
+	
+	#searchform{
+		
+		#s{
+			width: 200px;
+		}
+		
+		#searchsubmit{
+			background: $purp;
+			color: $white;
+			
+			&:hover{
+				background: darken($purp, 10%);
+			}
+		}
+	}
+}
+
+.search-result{
+	
+	border: 1px solid darken($lgrey, 10%);
+	margin: 2rem 0;
+	background: $white;
+	padding: 2rem;
+	
+	h3{
+		margin-top: 0;
+	}
 }
 
 

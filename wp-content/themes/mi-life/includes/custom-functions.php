@@ -23,6 +23,8 @@ function scripts_and_styles() {
 		wp_register_script( 'scrollto', get_stylesheet_directory_uri() . '/library/js/libs/jquery-scrollto.js', array(), null, false );
 		wp_register_script( 'allscripts', get_stylesheet_directory_uri() . '/library/js/scripts.js', array(), null, true );
 		
+		wp_register_script( 'rem', get_stylesheet_directory_uri() . '/library/js/libs/rem.min.js', array(), null, false );
+		
 		wp_enqueue_style( 'critstyles' );
 		wp_enqueue_style( 'stylesheet' );
 		wp_enqueue_style( 'fontload' );
@@ -36,6 +38,7 @@ function scripts_and_styles() {
 		wp_enqueue_script( 'helper' );
 		wp_enqueue_script( 'scrollto' );
 		wp_enqueue_script( 'allscripts' );
+		wp_enqueue_script( 'rem' );
 		
 	}
 }

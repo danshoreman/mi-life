@@ -43,7 +43,7 @@
 			    a{
 				    color: $purp;
 				    text-decoration: none;
-				    font-weight: bold;
+				    font-family: $barbold;
 				    
 				    &.sm{font-size: 14px;}
 				    &.md{font-size: 16px;}
@@ -75,11 +75,17 @@
 			
 			.main-logo{
 				float: left;
-				width: 190px;
+				width: 30%;
+				height: 60px;
+				//background: green;
+				
+				img{
+					width: 190px;
+				}
 			}
 			
 			.contact-wrap{
-				width: 190px;
+				width: 30%;
 				height: 60px;
 				float: right;
 				position: relative;
@@ -94,6 +100,10 @@
 					right: 0;
 					text-align: right;
 					float: none;
+					
+					.strong{
+						font-family: $barbold;
+					}
 				}
 				
 				.resize{
@@ -118,19 +128,19 @@
 	.header-wrap{
 
 		.page-header{
-			padding-top: 1rem;
+			padding-top: 1.2rem;
 			position: relative;
 			
 			.main-logo{
-				float: left;
-				width: 270px;
-				margin-left: 20px
+				height: 85px;
+				
+				img{
+					width: 270px;
+				}
 			}
 			
 			.contact-wrap{
-				width: 250px;
-				height: 80px;
-				margin: 0 20px 0 0;
+				height: 85px;
 				border-top: none;
 				
 				.contact-info{

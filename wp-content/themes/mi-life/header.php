@@ -22,10 +22,14 @@
 <?php // set /favicon.ico for IE10 win ?>
 <meta name="msapplication-TileColor" content="#d3492f">
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-<script src="//localhost:35729/livereload.js"></script>
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 <?php wp_head(); ?>
+
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+<![endif]-->
 
 </head>
 <body <?php body_class(); ?>>
@@ -41,14 +45,7 @@
 				<div id="toggle">Menu<span></span></div>
 				<div class="contact-wrap">
 					<p class="contact-info">For further information<br>
-					Call <strong>0800 130 0011</strong></p>
-					<!--
-<ul class="resize">
-						<li><span class="sm">A</span></li>
-						<li><span class="md">A</span></li>
-						<li><span class="lg">A</span></li>
-					</ul>
--->
+					Call <span class="strong">0800 130 0011</span></p>
 					<p class="font-changer"><span class="js-font-decrease">A</span> <span class="js-font-normal">A</span> <span class="js-font-increase">A</span></p>
 					<p id="fontSize"></p>
 				</div>
