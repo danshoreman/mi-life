@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 
-<title><?php wp_title(); ?></title>
+<title><?php wp_title('Dorset Accessible Home Service'); ?></title>
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -22,14 +22,19 @@
 <?php // set /favicon.ico for IE10 win ?>
 <meta name="msapplication-TileColor" content="#d3492f">
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-<script src="//localhost:35729/livereload.js"></script>
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 <?php wp_head(); ?>
 
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+<![endif]-->
+
 </head>
 <body <?php body_class(); ?>>
 <a id="top-anchor"></a>
+
 <div class="header-wrap">
 	<div class="row">
 		<div class="small-12 columns">
@@ -40,12 +45,9 @@
 				<div id="toggle">Menu<span></span></div>
 				<div class="contact-wrap">
 					<p class="contact-info">For further information<br>
-					Call <strong>0800 130 0011</strong></p>
-					<ul class="resize">
-						<li><a href="" class="sm">A</a></li>
-						<li><a href="" class="md">A</a></li>
-						<li><a href="" class="lg">A</a></li>
-					</ul>
+					Call <span class="strong">0800 130 0011</span></p>
+					<p class="font-changer"><span class="js-font-decrease">A</span> <span class="js-font-normal">A</span> <span class="js-font-increase">A</span></p>
+					<p id="fontSize"></p>
 				</div>
 				<?php wp_nav_menu( array( 'menu' => 'Main Menu', 'container_class' => 'main-menu' ) ); ?>
 			</header>

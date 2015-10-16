@@ -52,9 +52,14 @@
 		margin: auto;
 		text-align: center;
 		
+		p{
+			font-size: 1.2rem;
+		}
+		
 		p:first-of-type{
 			color: $purp;
-			font-weight: bold;
+			font-family: $barbold;
+			font-size: 100%;
 		}
 		
 		img{
@@ -74,6 +79,7 @@
 				color: $purp;
 				position: relative;
 				list-style-type: none;
+				font-size: 1.2rem;
 								
 				&:before{
 					position: absolute;
@@ -83,6 +89,7 @@
 			    display: block;
 			    width: 10px;
 			    height: 10px;
+					background: url(../images/general/arrow.png) center center no-repeat;
 					background: url(../images/general/arrow.svg) center center no-repeat;
 					@include back-size(contain);
 				}
@@ -99,6 +106,7 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		cursor: pointer;
+		text-align: center;
 		@include border-radius(50px);
 		@include transition();
 		@include h-font;
@@ -106,6 +114,49 @@
 		&:hover{
 			background: darken($green, 5%);
 		}
+	}
+}
+
+.top-btn{
+	text-align: center;
+}
+
+.post-not-found{
+	border: 1px solid darken($lgrey, 10%);
+	margin: 2rem 0;
+	background: $white;
+	padding: 2rem;
+	
+	h1{
+		margin-top: 0;
+	}
+	
+	#searchform{
+		
+		#s{
+			width: 200px;
+		}
+		
+		#searchsubmit{
+			background: $purp;
+			color: $white;
+			
+			&:hover{
+				background: darken($purp, 10%);
+			}
+		}
+	}
+}
+
+.search-result{
+	
+	border: 1px solid darken($lgrey, 10%);
+	margin: 2rem 0;
+	background: $white;
+	padding: 2rem;
+	
+	h3{
+		margin-top: 0;
 	}
 }
 
@@ -147,10 +198,10 @@
 			padding-top: 3rem;
 			
 			p{
-				font-size: 1.2rem;
+				//font-size: 1.2rem;
 				
 				&:first-of-type{
-					font-size: 1.4rem;
+					//font-size: 1.4rem;
 				}
 			}
 			
@@ -161,7 +212,7 @@
 				border-bottom: 3px solid $purp;
 				
 				li{
-					font-size: 1.2rem;
+					//font-size: 1.2rem;
 					margin-left: 1.2rem;
 					
 					&:before{
@@ -177,7 +228,7 @@
 					li{
 						width: 47%;
 				    float: left;
-				    font-size: 1.2rem;
+				    //font-size: 1.2rem;
 					}	
 					@include clearfix;
 				}

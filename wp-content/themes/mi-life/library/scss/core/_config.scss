@@ -50,6 +50,14 @@ $lblue:							#80ccf3;
 $green:							#30af51;
 $lgrey:        			#f2f2f2;
 
+// core colours
+$cturq:							#00a59b;
+$cyell:							#fff100;
+$cgrey:							#58595b;
+$clgrey:						#f2f2f2;
+$cblue:							#262261;
+$csblue:						#4dc1ef;
+
 
 $link-color:        $purp;
 $link-hover:        darken($link-color, 10%);
@@ -66,6 +74,10 @@ $disabled-gray:     #cfcfcf;
 // Font stacks
 $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+
+$bebas:      				'bebas_neueregular', $sans-serif;
+$barreg:		      	'bariol_regularregular', $sans-serif;
+$barbold:		      	'bariol_boldbold', $sans-serif;
 
 // Change these to your own
 
