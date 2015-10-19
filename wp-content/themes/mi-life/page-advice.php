@@ -51,7 +51,7 @@
 			</div>
 		</dd>
 		<dt class="acc-title">
-			<span>ALTERNATIVE ACCOMODATION <img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/general/down-arrow-or.svg" class="acc-arrow" alt="Access &amp; Assessment"></span>
+			<span>ALTERNATIVE ACCOMMODATION <img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/general/down-arrow-or.svg" class="acc-arrow" alt="Access &amp; Assessment"></span>
 		</dt>
 		<dd>
 			<div class="row">
