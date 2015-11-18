@@ -6,7 +6,7 @@
 			</a>
 		</div>
 		<div class="small-12 medium-4 columns">
-			<p class="contact-number">For further information<br>Call <strong>0800 130 0011</strong></p>
+			<p class="contact-number">For further information<br>Call <strong>0333 00 300 10</strong></p>
 		</div>
 		<div class="small-12 medium-4 columns">
 			<a href="http://www.millbrookhealthcare.co.uk/en/" rel="nofollow" class="footer-logo mhc">
