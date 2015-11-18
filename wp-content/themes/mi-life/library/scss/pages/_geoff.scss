@@ -54,20 +54,22 @@
 	
 	.thinkText{
 	
-	.entry-content{
-		padding-top: 0;
-	}
+		.entry-content{
+			padding-top: 0;
+		}
 	
 		.thinkTitle{
 			text-transform: uppercase;
 			font-family: $bebas;
-			color: $cblue;
+			color: $purp;
+			margin-top: 0;
 		}
 		
 		h3{
 			font-size: 1.2rem;
 			margin-bottom: 2rem;
 			line-height: 1.2;
+			color: $purp;
 		}
 		
 		p{
@@ -164,25 +166,25 @@
 	}
 	
 	.roundel{
-		position: absolute;
-		right: 0;
-		bottom: -130px;
-		width: 200px;
-		height: 200px;
-		padding-top: 40px;
+		position: relative;
+		left: 50%;
+		width: 140px;
+		height: 140px;
+		margin-left: -70px;
+		padding-top: 25px;
 		background: #fff100;
 		text-align: center;
 		@include border-radius(100px);
-		display: none;
 		
 		p{
 			color: $cturq;
 			text-transform: uppercase;
 			margin: 0;
-				line-height: 1;
+			font-size: 12px;
+			line-height: 1;
 			
 			&.large{
-				font-size: 30px;
+				font-size: 23px;
 				 
 				font-family: $barbold;
 			}
@@ -196,6 +198,7 @@
 	
 	.title{
 		margin-bottom: 2rem;
+		margin-top: 0;
 		font-family: $bebas;
 		color: $cturq;
 		line-height: 1;
@@ -260,6 +263,10 @@
 			.threeIcon{
 				width: 70px;
 			}
+		}
+		
+		.roundel{
+			margin-top: 10px;
 		}
 	}
 }
@@ -344,9 +351,9 @@
 	}
 	
 	.thinkBlock{
+		padding: 4rem 0;
 		
 		.thinkContent{
-			//width: 300px;
 			margin: 0 auto;
 			
 			p{
@@ -360,7 +367,10 @@
 		}
 		
 		.roundel{
-			display: block;
+			position: absolute;
+			left: inherit;
+			right: 70px;
+			bottom: -70px;
 		}
 	}
 	
@@ -444,7 +454,6 @@
 		h4{
 			font-size: 2rem;
 			line-height: 1;
-			//margin-bottom: 3rem;
 		}
 		
 		.indicates-required{
@@ -458,7 +467,7 @@
 	}
 	
 	.thinkBlock{
-		padding: 4rem 0;
+		padding: 5rem 0;
 		
 		.thinkContent{
 			width: 300px;
@@ -476,6 +485,18 @@
 		
 		.roundel{
 			right: 10%;
+			bottom: -110px;
+			width: 200px;
+			height: 200px;
+			padding-top: 40px;
+			
+			p{
+				font-size: 16px;
+					
+				&.large{
+					font-size: 30px;
+				}
+			}
 		}
 	}
 	
